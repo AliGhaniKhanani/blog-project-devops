@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t mak570/blog-platform:latest .
+        run: docker build -t mak570/blog-platform:latest ./app
 
       - name: Push Docker Image
         run: docker push mak570/blog-platform:latest
